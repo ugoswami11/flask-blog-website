@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-wtf = {file = "https://github.com/wtforms/flask-wtf/archive/main.tar.gz"}
+email-validator = "*"
+flask-sqlalchemy = "*"
+flask-bcrypt = "*"
+flask-login = "*"
 
 [dev-packages]
 
