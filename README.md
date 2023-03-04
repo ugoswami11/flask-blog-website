@@ -19,4 +19,16 @@ Execute the run.py file
 python run.py
 ```
 
+# Environment variables setup
+This is a pre-requisite to run the application. we have to set up few environment variables. To set up environment variable in virtual env the easiest step is to create a ```.env``` file where the pipfile and pipfile.lock are present. Include the below variables in the ```.env``` files.
+```
+MAIL_USER = ''
+MAIL_PASS = ''
+SECRET_KEY = 'mysecretkey'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
+```
+The ```SQLALCHEMY_DATABASE_URI``` should be as mentioned above, this will connect to the sqlite db.
 
+The ```SECRET_KEY``` should be set to a unique key and can be anything.
+
+The ```MAIL_USER``` and ```MAIL_PASS``` variables are used for the reset email functionality. Here we can provide our mail id and password. We have to also setup ```the MAIL_SERVER``` and ```MAIL_PORT``` in the ```config.py``` file inside the blog directory. It depends on the email provider we are using. I have used zohomail in this case.
